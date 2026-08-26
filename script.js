@@ -125,17 +125,47 @@ if (swiperElement && typeof Swiper !== "undefined") {
 
 
     const rsvpForm = document.querySelector('form[name="rsvp"]');
+const guestsCount = document.getElementById("guestsCount");
+const attendanceInputs = document.querySelectorAll('input[name="attendance"]');
 
-    if (rsvpForm) {
-        rsvpForm.addEventListener("submit", () => {
-            const button = rsvpForm.querySelector("button");
+if (rsvpForm && guestsCount) {
 
-            if (button) {
-                button.textContent = "Ուղարկվում է...";
-                button.disabled = true;
-            }
-        });
+    function updateGuestsRequirement() {
+        const selected = document.querySelector(
+            'input[name="attendance"]:checked'
+        );
+
+        if (!selected) return;
+
+        if (selected.value === "yes") {
+            guestsCount.required = true;
+            guestsCount.disabled = false;
+            guestsCount.placeholder = "Հյուրերի քանակ";
+        } else {
+            guestsCount.required = false;
+            guestsCount.disabled = true;
+            guestsCount.value = "";
+            guestsCount.placeholder = "Հյուրերի քանակ";
+        }
     }
+
+    attendanceInputs.forEach(input => {
+        input.addEventListener("change", updateGuestsRequirement);
+    });
+
+    updateGuestsRequirement();
+
+    rsvpForm.addEventListener("submit", () => {
+
+        const button = rsvpForm.querySelector("button");
+
+        if (button) {
+            button.textContent = "Ուղարկվում է...";
+            button.disabled = true;
+        }
+
+    });
+}
 
 
     document.querySelectorAll("button").forEach(button => {

@@ -280,11 +280,13 @@
         </section>
 
 
-        <section class="rsvp" data-aos="fade-up">
+       <section class="rsvp" data-aos="fade-up">
     <div class="container rsvp-container">
 
         <div class="rsvp-header-block">
+
             <div class="rsvp-number">05</div>
+
             <div class="rsvp-title-img-wrap">
                 <img src="rsvp.png" alt="RSVP" class="rsvp-title-img">
             </div>
@@ -292,38 +294,20 @@
             <div class="rsvp-divider"></div>
 
             <p class="rsvp-subtitle">
-                Մեզ համար շատ կարևոր է Ձեր ներկայությունը։ 
+                Մեզ համար շատ կարևոր է Ձեր ներկայությունը։
                 Խնդրում ենք հաստատել մինչև 15.03.2027
             </p>
+
         </div>
 
         <form class="elegant-form" id="rsvpForm" name="rsvp">
 
-            <div class="form-group-row">
-                <input 
-                    type="text" 
-                    name="name" 
-                    placeholder="Անուն, Ազգանուն" 
-                    required
-                >
-
-                <select name="side" required>
-                    <option value="" disabled selected>Ու՞մ կողմից</option>
-                    <option value="groom">Փեսացուի</option>
-                    <option value="bride">Հարսնացուի</option>
-                </select>
-            </div>
-
-            <div class="form-group-row">
-                <input 
-                    type="number" 
-                    name="guests_count" 
-                    min="1" 
-                    max="10" 
-                    placeholder="Հյուրերի քանակ" 
-                    required
-                >
-            </div>
+            <input
+                type="text"
+                name="name"
+                placeholder="Անուններ, Ազգանուններ"
+                required
+            >
 
             <div class="attendance-group">
 
@@ -335,10 +319,10 @@
 
                     <label class="radio-container">
                         Այո, սիրով
-                        <input 
-                            type="radio" 
-                            name="attendance" 
-                            value="yes" 
+                        <input
+                            type="radio"
+                            name="attendance"
+                            value="yes"
                             checked
                         >
                         <span class="checkmark"></span>
@@ -346,9 +330,9 @@
 
                     <label class="radio-container">
                         Ցավոք՝ ոչ
-                        <input 
-                            type="radio" 
-                            name="attendance" 
+                        <input
+                            type="radio"
+                            name="attendance"
                             value="no"
                         >
                         <span class="checkmark"></span>
@@ -357,6 +341,24 @@
                 </div>
 
             </div>
+
+            <input
+                type="number"
+                id="guestsCount"
+                name="guests_count"
+                min="1"
+                max="10"
+                placeholder="Հյուրերի քանակ"
+                required
+            >
+
+            <select name="side" required>
+                <option value="" disabled selected>
+                    Ու՞մ կողմից եք հրավիրված
+                </option>
+                <option value="groom">Փեսացուի</option>
+                <option value="bride">Հարսնացուի</option>
+            </select>
 
             <div class="form-actions">
                 <button type="submit" class="elegant-btn">
