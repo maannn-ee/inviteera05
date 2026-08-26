@@ -1544,7 +1544,7 @@ footer p,
 
 @media (max-width: 480px) {
     .letter-wrapper {
-        width: 94vw;
+        width: 100vw;
     }
 
     .open-text {
