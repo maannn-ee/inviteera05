@@ -845,15 +845,16 @@ main.invitation section:not(.thanks) h2::before,
 }
 
 .slider-track {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
 .slider-track img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
 }
@@ -1507,9 +1508,6 @@ footer p,
         right: 5px;
     }
 
-    .slider-track img {
-        height: 280px;
-    }
 
     .rsvp {
         padding: 80px 15px;
