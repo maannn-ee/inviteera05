@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wedding Invitation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+
+    <section class="envelope-screen" id="envelopeScreen">
+        <div class="letter-wrapper" id="openLetter">
+            <img src="letter.jpg" alt="Wedding Invitation" class="letter-image">
+        </div>
+    </section>
+
+
+    <main class="invitation" id="invitation">
+
+        <div class="loader">
+            <div class="loader-ring"></div>
+        </div>
+
+
+        <audio id="music" loop>
+            <source src="erg.mp3" type="audio/mpeg">
+        </audio>
+
+
+        <div class="music-logo-wrapper">
+            <!-- Instagram-ի հղմամբ լոգոյի շրջանակը -->
+            <a href="https://www.instagram.com/_invitera?igsi=N3RsaWw0bHh5MmZl" target="_blank" class="music-logo" aria-label="Instagram Page">
+                <img src="logo.png" alt="Logo">
+            </a>
+
+            <!-- Audio կոճակը -->
+            <button class="music-btn" onclick="toggleMusic()" aria-label="Play/Pause Music">
+                <svg id="musicIcon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                </svg>
+            </button>
+        </div>
+
+
+        <section class="hero">
+
+            <div class="overlay">
+
+                <p class="welcome">
+                    Սիրով հրավիրում ենք
+                </p>
+
+                <h1>
+                    <span class="name">Arsen</span>
+                    <span class="amp">&</span>
+                    <span class="name">Nare</span>
+                </h1>
+
+                <div class="line"></div>
+
+                <p class="date">
+                    17.04.2027
+                </p>
+
+                <a href="#calendar" class="scroll-btn">
+                    Դիտել հրավերը
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section id="calendar" class="calendar-section" data-aos="fade-up">
+
+            <div class="calendar-card">
+
+                <h2>Ապրիլ 2027</h2>
+
+                <div class="calendar">
+
+                    <div class="week">Երկ</div>
+                    <div class="week">Երք</div>
+                    <div class="week">Չրք</div>
+                    <div class="week">Հնգ</div>
+                    <div class="week">Ուրբ</div>
+                    <div class="week">Շբթ</div>
+                    <div class="week">Կիր</div>
+
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                    <div>11</div>
+
+                    <div>12</div>
+                    <div>13</div>
+                    <div>14</div>
+                    <div>15</div>
+                    <div>16</div>
+
+                    <div class="special">
+                        <span>17</span>
+                    </div>
+
+                    <div>18</div>
+                    <div>19</div>
+                    <div>20</div>
+                    <div>21</div>
+                    <div>22</div>
+                    <div>23</div>
+                    <div>24</div>
+                    <div>25</div>
+                    <div>26</div>
+                    <div>27</div>
+                    <div>28</div>
+                    <div>29</div>
+                    <div>30</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="countdown" data-aos="fade-up">
+
+            <div class="container">
+
+                <h2>Մինչ հարսանիքը մնացել է</h2>
+
+                <div id="timer">
+
+                    <div>
+                        <span id="days">00</span>
+                        <p>Օր</p>
+                    </div>
+
+                    <div>
+                        <span id="hours">00</span>
+                        <p>Ժամ</p>
+                    </div>
+
+                    <div>
+                        <span id="minutes">00</span>
+                        <p>Րոպե</p>
+                    </div>
+
+                    <div>
+                        <span id="seconds">00</span>
+                        <p>Վայրկյան</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="schedule">
+    <div class="container">
+        <h2>Օրվա ծրագիրը և վայրերը</h2>
+        <div class="schedule-card timeline">
+
+            <div class="item" data-aos="fade-up">
+                <div class="number-badge">
+                    <span class="number">01</span>
+                    <span class="time-badge">11:00</span>
+                </div>
+                <div class="item-content">
+                    <h3>Հարսիկի տուն</h3>
+                    <p class="location-address">Գ․ Փարաքար, Թաիրով փոց.</p>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="map-btn">
+                        <span>Տեսնել քարտեզը</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="item" data-aos="fade-up">
+                <div class="number-badge">
+                    <span class="number">02</span>
+                    <span class="time-badge">15:00</span>
+                </div>
+                <div class="item-content">
+                    <h3>Պսակադրություն</h3>
+                    <p class="location-name">Ս. Խաչ եկեղեցի</p>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="map-btn">
+                        <span>Տեսնել քարտեզը</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="item" data-aos="fade-up">
+                <div class="number-badge">
+                    <span class="number">03</span>
+                    <span class="time-badge">18:00</span>
+                </div>
+                <div class="item-content">
+                    <h3>Հարսանյաց հանդիսություն</h3>
+                    <p class="location-name">Restaurant Florence</p>
+                    <a href="https://maps.app.goo.gl/eovhFpgRjgYLX4tA9" target="_blank" rel="noopener noreferrer" class="map-btn">
+                        <span>Տեսնել քարտեզը</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <section class="gallery" data-aos="fade-up">
+
+            <div class="container">
+
+                <h2>Մեր հիշողությունները</h2>
+
+                <div class="gallery-slider swiper">
+
+                    <div class="slider-container swiper-wrapper">
+
+                        <div class="slider-track swiper-slide">
+                            <img src="1.jpg" alt="">
+                        </div>
+                        <div class="slider-track swiper-slide">
+                            <img src="2.jpg" alt="">
+                        </div>
+                        <div class="slider-track swiper-slide">
+                            <img src="3.jpg" alt="">
+                        </div>
+                        <div class="slider-track swiper-slide">
+                            <img src="4.jpg" alt="">
+                        </div>
+                        <div class="slider-track swiper-slide">
+                            <img src="5.jpg" alt="">
+                        </div>
+                        <div class="slider-track swiper-slide">
+                            <img src="6.jpg" alt="">
+                        </div>
+
+                    </div>
+
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="rsvp" data-aos="fade-up">
+            <div class="container rsvp-container">
+              
+<div class="rsvp-title-img-wrap">
+    <img src="rsvp.png" alt="RSVP" class="rsvp-title-img">
+</div>
+                    <div class="rsvp-divider"></div>
+                    <p class="rsvp-subtitle">Մեզ համար շատ կարևոր է Ձեր ներկայությունը։ Խնդրում ենք հաստատել մինչև 15.03.2027</p>
+                </div>
+
+                <form class="elegant-form" id="rsvpForm">
+                        <div class="form-group-row">
+                            <input type="text" name="name" placeholder="Անուն, Ազգանուն" required>
+                            <select name="side" required>
+                                <option value="" disabled selected>Ու՞մ կողմից</option>
+                                <option value="groom">Փեսացուի</option>
+                                <option value="bride">Հարսնացուի</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-row">
+                            <input type="number" name="guests_count" min="1" max="10" placeholder="Հյուրերի քանակ" required>
+                        </div>
+
+                        <div class="attendance-group">
+                            <p class="attendance-label">Մասնակցու՞մ եք</p>
+                            <div class="radio-options">
+                                <label class="radio-container">
+                                    Այո, սիրով
+                                    <input type="radio" name="attendance" value="yes" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">
+                                    Ցավոք՝ ոչ
+                                    <input type="radio" name="attendance" value="no">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="elegant-btn">ՈՒՂԱՐԿԵԼ</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="thanks">
+
+            <div class="container">
+
+                <h2>Սիրով սպասում ենք Ձեզ</h2>
+
+                <div class="heart">
+                    <img src="heart.png" alt="Heart">
+                </div>
+
+                <h3>Arsen & Nare</h3>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <div style="text-align: center;">
+  <p style="color: #ffffff; margin-bottom: 8px;">With Love by</p>
+  <a href="https://www.instagram.com/_invitera?igsi=N3RsaWw0bHh5MmZl" target="_blank" style="display: inline-block;">
+    <img src="logo.png" alt="Logo" style="width: 75px; height: auto; filter: brightness(0) invert(1); display: block; margin: 0 auto;">
+  </a>
+</div>
+        </footer>
+
+    </main>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
