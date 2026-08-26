@@ -1045,11 +1045,12 @@ main.invitation section h2::before,
 }
 
 .rsvp-title-img {
-    max-width: 260px;
+    max-width: 350px;
     width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
+
 }
 
 .rsvp-body-block {
@@ -1609,7 +1610,7 @@ footer p,
     }
 
     .rsvp-title-img {
-        max-width: 200px;
+        max-width: 350px;
     }
 
     .elegant-btn {
