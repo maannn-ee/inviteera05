@@ -992,6 +992,13 @@ main.invitation section h2::before,
     justify-content: center;
 }
 
+.rsvp-divider {
+    width: 55px;
+    height: 1px;
+    background: #a7bac3;
+    margin: 20px auto 25px;
+}
+
 .rsvp::before {
     content: '';
     position: absolute;
@@ -1575,8 +1582,10 @@ footer p,
     .calendar-card {
         padding: 24px 10px;
     }
+    .calendar {
+    gap: 5px;
+}
 
-    .calendar gap: 5px;
 
     .calendar div {
         font-size: 12px;
