@@ -167,7 +167,7 @@ if (swiperElement && typeof Swiper !== "undefined") {
         heart.classList.add("floating-heart");
 
         const image = document.createElement("img");
-        image.src = "miniheart.png";
+        image.src = "heart.png";
         image.alt = "";
 
         heart.appendChild(image);
@@ -183,7 +183,7 @@ if (swiperElement && typeof Swiper !== "undefined") {
         }, 8000);
     }
 
-    setInterval(createFloatingHeart, 2500);
+    setInterval(createFloatingHeart, 700);
 
 
     if (typeof AOS !== "undefined") {

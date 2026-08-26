@@ -137,8 +137,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ԲԱԺԻՆՆԵՐԻ ԱՎՏՈՄԱՏ ՀԱՄԱՐԱԿԱԼՈՒՄ (01, 02, 03...) */
-main.invitation section h2::before,
-.invitation section h2::before {
+main.invitation section:not(.thanks) h2::before,
+.invitation section:not(.thanks) h2::before {
     counter-increment: section-counter;
     content: counter(section-counter, decimal-leading-zero);
     display: block;
@@ -852,8 +852,8 @@ main.invitation section h2::before,
 
 .slider-track img {
     width: 100%;
-    height: 320px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
 }
@@ -1031,6 +1031,15 @@ main.invitation section h2::before,
     width: 100% !important;
     text-align: center;
     margin-bottom: 25px;
+}
+.rsvp-number {
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #8da2ac;
+    margin-bottom: 8px;
 }
 
 .rsvp-header-block h2 {
@@ -1618,9 +1627,7 @@ footer p,
         padding: 18px 0;
     }
 
-    .slider-track img {
-        height: 230px;
-    }
+
 
     #timer {
         grid-template-columns: repeat(2, 1fr);
